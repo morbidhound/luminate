@@ -1,0 +1,13 @@
+<html>
+ <head>
+ </head>
+ <body>
+   <form id="cform1" method="post">
+   <label for="colorpicker">Color Picker:</label>
+   <input type="color" id="colorpicker" name="c1" value="#0000ff">
+   <label for="sub1">Submit</label>
+   <input type="submit" id="sub1">
+   <br>
+   <h5>{{ request.form["c1"] }}</h5>
+ </body>
+</html>
