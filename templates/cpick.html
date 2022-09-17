@@ -1,13 +1,58 @@
-<html>
- <head>
- </head>
- <body>
-   <form id="cform1" method="post">
-   <label for="colorpicker">Color Picker:</label>
-   <input type="color" id="colorpicker" name="c1" value="#0000ff">
-   <label for="sub1">Submit</label>
-   <input type="submit" id="sub1">
-   <br>
-   <h5>{{ request.form["c1"] }}</h5>
- </body>
-</html>
+{% extends 'base.html' %}
+
+
+{%block title %}Color Picker{%endblock %}
+
+  {%block body %}
+<!--  <div class="container">
+  <div class = "m-2 row text-center mx-auto">
+   <div class = "col-sm">
+  <form action="#" method="post">
+    <div  class="m-2 w-50 text-center">
+      <label for="cpick">Pick a Color</label>
+      <input type="color" name="col" value="{{last_color}}" class="form-control" id="cpick">
+    </div>
+    <div class="m-2 text-center">
+    <button type="submit" class="btn btn-primary m-2 ">Submit</button>
+  </div>
+  </form>
+</div>  
+</div>
+
+</div> -->
+
+<div class="card">
+  <div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
+    <form action="#" method="post">
+      <div  class="m-2
+       text-center">
+        <label for="cpick">Pick a Color</label>
+        <input type="color" name="col" value="{{last_color}}" class="form-control" id="cpick">
+      </div>
+      <div class="m-2 text-center">
+      <button type="submit" class="btn btn-primary m-2 ">Submit</button>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Default radio
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        Default checked radio
+      </label>
+    </div>
+    
+    </form>
+
+    <div id="color-picker-1" class="mx-auto"></div>
+  </div>
+</div>
+
+  </div>
+
+  {%endblock%}
+
